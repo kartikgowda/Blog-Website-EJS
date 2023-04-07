@@ -4,8 +4,16 @@
 
     <p>
     <form action="/compose" method="post">
-        <input type="text" name="postTitle" id="postTitle">
-        <button type="submit" name="button">Publish</button>
+        <div class="mb-3">
+            <label for="postTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" name="postTitle" id="postTitle" aria-describedby="helpId"
+                placeholder="">
+        </div>
+        <div class="mb-3">
+            <label for="postBody" class="form-label">Post</label>
+            <textarea class="form-control" name="postBody" id="postBody" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Publish</button>
     </form>
     </p>
 

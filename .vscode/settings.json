@@ -1,3 +1,5 @@
 {
-  "oneDarkPro.editorTheme": "VS Code"
+  "oneDarkPro.editorTheme": "VS Code",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }

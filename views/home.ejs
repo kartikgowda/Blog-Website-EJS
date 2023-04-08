@@ -2,9 +2,25 @@
 
     <h1>Home</h1>
 
-    <p>
+    <div>
         <%= homeStartingContent %>
-    </p>
-    <!-- <%= console.log(posts) %> -->
+    </div>
+    <!-- <% posts.forEach(function(post) { %>
+            <h2>
+                <%= post.postTitle %>
+            </h2>
+            <p>
+                <%= post.postBody %>
+            </p>
+            <% }); %> -->
+    <div>
+        <% posts.forEach(function(post) { %>
+            <h2>
+                <%= post.postTitle %>
+            </h2>
+            <% }); %>
+                <!-- <% for(let i=0;i<=posts.length;i++) { console.log(posts[i]) } %> -->
+    </div>
+
 
     <%- include('partials/footer') %>

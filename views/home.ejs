@@ -7,13 +7,15 @@
     </div>
     <div>
         <!-- TODO: Design Post Section -->
+
         <% posts.forEach(function(post) { %>
             <h2>
                 <%= post.postTitle %>
             </h2>
 
             <p>
-                <%= post.postBody %>
+                <%= post.postBody.substring(0,100) + " ..." %>
+                    <a href="http://localhost:3000/posts/<%=post.postTitle%>">Read More</a>
             </p>
             <% }); %>
     </div>

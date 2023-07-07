@@ -3,7 +3,6 @@ const _ = require('lodash');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 
-
 // //* Load method categories.
 // const array = require('lodash/array');
 // const object = require('lodash/fp/object');
@@ -59,13 +58,14 @@ app.get('/posts/:postName', function (req, res) {
       console.log(post.postTitle);
       console.log(post.postBody);
       // res.render('post', { posts: posts });
-      res.render('post', { postTitle: post.postTitle, postBody: post.postBody })
-    }
-    else {
+      res.render('post', {
+        postTitle: post.postTitle,
+        postBody: post.postBody,
+      });
+    } else {
       // console.log('No match found!');
     }
-  }
-  );
+  });
 });
 
 app.post('/compose', function (req, res) {
@@ -74,10 +74,7 @@ app.post('/compose', function (req, res) {
     postBody: req.body.postBody,
   };
   posts.push(post);
-  res.render('home', {
-    homeStartingContent: homeStartingContent,
-    posts: posts,
-  });
+  res.redirect('/');
 });
 
 app.listen(3000, function () {
